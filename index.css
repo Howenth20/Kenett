@@ -7,25 +7,33 @@ body{
 .content{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
-    width: 600px;
+    width: 500px;
     margin: 50px auto;
+    padding: 60px 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #50a7f8, #3c62ca);
 }
 .form{
     display: flex;
     flex-direction: row;
     gap: 20px;
     align-items: center;
+    justify-content: center ;
 }
 .input{
-    padding: 10px 20px;
+    padding: 10px 30px;
     margin: 10px 0;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
 }
 
 #search{
-    width: 400px;
+    width: 350px;
     height: 30px;
 }
 
@@ -36,7 +44,8 @@ body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    padding: 0;
+    padding: 3px;
+    background-color: white;
 }
 
 .button{
@@ -51,4 +60,74 @@ body{
     height: 100%;
     object-fit: contain;
     border: none;
+    background-color: white;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.content_img{
+    width: 150px;
+    height: 150px;
+}
+
+.img_2{
+    width: 100%;
+    height: 100%;
+}
+
+.dat{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.text_dat{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+}
+
+.content_caracter{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+.caracter{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+}
+
+.img_caracter{
+    width: 50px;
+    height: 50px;
+}
+
+.img_caracter_2{
+    width: 50px;
+    height: 50px;
+}
+
+.box_text{
+    display: flex;
+    flex-direction: column;
+}
+
+.caracter_text{
+    display: inline;
+    width: 80px;
+    margin: 3px;
 }
