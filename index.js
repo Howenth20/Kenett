@@ -1,12 +1,68 @@
-const API_KEY = `930b56c7e1ce4dcd99f153915260609`;
-const API = `https://api.weatherapi.com/v1/current.json?q=${ciudad}&lang=${idioma}&key=${claveApi}`;
-
-const response = await fetch(API);
-let data = response.json;
-
+const API_KEY = "930b56c7e1ce4dcd99f153915260609";
 const idioma = "es";
-let ciudad = documentGetbyId("search");
 
-const getdata = () => {
-  let a = consolog(data);
+const init = () => {
+  const dat = document.getElementById("dat");
+  dat.innerHTML = `
+    <p class="text_dat">---------</p>
+    <p class="text_dat">-------------</p>
+  `;
+  const box_text = document.getElementById("box_text");
+  box_text.innerHTML = `
+    <p class="caracter_text">------</p>
+    <p class="caracter_text">------</p>
+  `;
+  const box_text_2 = document.getElementById("box_text_2");
+  box_text_2.innerHTML = `
+    <p class="caracter_text">------</p>
+    <p class="caracter_text">------</p>
+  `;
+}
+
+const postWeather = (data) => {
+  const dat = document.getElementById("dat");
+  dat.innerHTML = `
+    <p class="text_dat">${data.current.temp_c}°c</p>
+    <p class="text_dat">${data.location.name}</p>
+  `;
+  const typeTime = document.getElementById("typeTime");
+  typeTime.innerHTML = `${data.current.condition.text}`;
+  const box_text = document.getElementById("box_text");
+  box_text.innerHTML = `
+    <p class="caracter_text">${data.current.humidity}%</p>
+    <p class="caracter_text">Humedad</p>
+  `;
+  const box_text_2 = document.getElementById("box_text_2");
+  box_text_2.innerHTML = `
+    <p class="caracter_text">${data.current.vis_km} km/h</p>
+    <p class="caracter_text">Viento</p>
+  `;
 };
+
+const getWeather = async () => {
+  const text = document.getElementById("search").value;
+  const ciudad = text.toLowerCase();
+  const API = `https://api.weatherapi.com/v1/current.json?q=${ciudad}&lang=${idioma}&key=${API_KEY}`;
+
+  try {
+    const response = await fetch(API);
+    const data = await response.json();
+
+    postWeather(data);
+    console.log(data);
+  } catch (error) {
+    console.error("Error fetching weather data:", error);
+  }
+};
+
+
+const app = () => {
+  init();
+  const searchButton = document.getElementById("form");
+  searchButton.addEventListener("submit", (e) => {
+    e.preventDefault();
+    getWeather();
+  });
+}
+
+app();
