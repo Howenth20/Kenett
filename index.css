@@ -67,6 +67,12 @@ body{
     pointer-events: none;
 }
 
+img{
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
 .box{
     display: flex;
     flex-direction: column;
