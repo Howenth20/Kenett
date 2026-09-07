@@ -120,7 +120,10 @@ body{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    width: 100px;
+    box-sizing: border-box;
+    width: 95px;
+    justify-content: center;
+    align-items: center;
 }
 
 .img_caracter{
