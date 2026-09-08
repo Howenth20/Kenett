@@ -34,7 +34,7 @@ const postWeather = (data) => {
   `;
   const box_text_2 = document.getElementById("box_text_2");
   box_text_2.innerHTML = `
-    <p class="caracter_text">${data.current.vis_km} km/h</p>
+    <p class="caracter_text">${data.current.wind_kph} km/h</p>
     <p class="caracter_text">Viento</p>
   `;
 };
