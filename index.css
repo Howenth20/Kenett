@@ -189,7 +189,6 @@ img {
     .content {
         width: 100%;
         max-width: 500px;
-        min-height: auto;
         margin: 0;
         padding: 30px 20px;
     }
@@ -213,7 +212,6 @@ img {
 
     .content {
         width: 100%;
-        min-height: calc(100vh - 20px);
         padding: 25px 15px;
         border-radius: 12px;
     }
