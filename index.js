@@ -17,6 +17,10 @@ const init = () => {
     <p class="caracter_text">------</p>
     <p class="caracter_text">------</p>
   `;
+  const content_img= document.getElementById("content_img");
+  content_img.innerHTML =`
+    <img class="img_2" src="./assest/clima-ejemplo.webp" alt="" />
+  `;
 }
 
 const postWeather = (data) => {
@@ -36,6 +40,10 @@ const postWeather = (data) => {
   box_text_2.innerHTML = `
     <p class="caracter_text">${data.current.wind_kph} km/h</p>
     <p class="caracter_text">Viento</p>
+  `;
+  const content_img= document.getElementById("content_img");
+  content_img.innerHTML =`
+    <img class="img_2" src="https:${data.current.condition.icon}"  alt="" />
   `;
 };
 
