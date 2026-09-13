@@ -108,6 +108,10 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
+
+        a{
+            text-decoration: none;
+        }
         
         .proyecto {
             background: white;
@@ -178,6 +182,7 @@
             border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s;
+            resize: none;
         }
         
         input:focus, textarea:focus {
