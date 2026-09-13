@@ -5,7 +5,7 @@
 }
 
 main{
-    height: 90.9vh;
+    height: 90.4vh;
 }
 
 .base{
@@ -185,12 +185,13 @@ footer {
     justify-content: center;
     background-color: #007194;
     padding: 25px;
+    font-family: monospace;
 }
 
 .footer-link {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 20px;
     justify-content: center;
     align-items: center;
